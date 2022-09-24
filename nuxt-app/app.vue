@@ -2,22 +2,25 @@
   <div>
     <button class="button" @click="signIn">Sign In</button>
     <button class="button" @click="signOut">Sign Out</button>
+    <pre>
+    {{ credentials }}
+    </pre>
   </div>
 </template>
 
 <script setup>
 console.log("---APP---");
 
+const credentials = ref();
+
 const signIn = async () => {
   const email = "sam@razorex.com";
   const password = "123456";
-  const credentials = await signInUser(email,password);
-  console.log("Credentials",credentials);
+  credentials.value = await signInUser(email,password);
 }
 
 const signOut = async () => {
-  const result = await signOutUser();
-  console.log("result", result);
+  credentials.value = await signOutUser();
 }
 
 onMounted(async () => {
