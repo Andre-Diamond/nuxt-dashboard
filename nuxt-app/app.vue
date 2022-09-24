@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="container mt-6" v-if="!firebaseUser">
+    <div class="container p-6" v-if="!firebaseUser">
       <div class="column is-half is-offset-one-quarter">
         <AuthFirebase
-          class="box px-5 py-5 mx-4"
+          class="has-background-info-dark box px-5 py-5 mx-4"
           title="Register"
           @submit="register"
           :form="registerForm"
@@ -11,7 +11,7 @@
           v-if="showRegisterForm"
         />
         <AuthFirebase
-          class="box px-5 py-5 mx-4"
+          class="has-background-info-dark box px-5 py-5 mx-4"
           title="Sign in"
           @submit="signin"
           :form="signinForm"
@@ -62,4 +62,8 @@ const register = async () => {
 <style>
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
+body {
+  background-color: rgb(35, 20, 104);
+  height: 100vh;
+}
 </style>
