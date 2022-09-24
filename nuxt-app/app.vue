@@ -1,15 +1,21 @@
 <template>
   <div>
-    <button class="button" @click="signIn">Sign In</button>
-    <button class="button" @click="signOut">Sign Out</button>
+    <button class="button" @click="signIn" v-if="!firebaseUser">Sign In</button>
+    <button class="button" @click="signOut" v-if="firebaseUser">Sign Out</button>
+    <div v-if="firebaseUser">
+    <client-only>
     <pre>
-    {{ credentials }}
+    {{ firebaseUser }}
     </pre>
+    </client-only>
+  </div>
+  <div v-else>User signed out</div>
   </div>
 </template>
 
 <script setup>
 console.log("---APP---");
+const firebaseUser = userFirebaseUser();
 
 const credentials = ref();
 
