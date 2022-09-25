@@ -1,7 +1,12 @@
 <template>
   <div>
-    <p><NuxtLink to="/secret">Go to Secret Page</NuxtLink></p>
-    <button class="button" @click="signOut" v-if="firebaseUser">Sign out</button>
+    <div>
+      <button class="button m-3" v-if="firebaseUser">
+        <NuxtLink to="/secret">View Changes</NuxtLink>
+      </button>
+      <button class="button is-pulled-right m-3" @click="signOut" v-if="firebaseUser">Sign out</button>
+      <p class="is-pulled-right m-4 has-text-light">user: {{ firebaseUser.email }}</p>
+    </div>
     <div v-if="firebaseUser">
       <div class="container p-6">
       <div class="column is-half is-offset-one-quarter">
@@ -16,7 +21,6 @@
       </div>
       <client-only>
         <pre>
-          user: {{ firebaseUser.email }}
           {{ pages }}
           <button class="button" @click="showData" v-if="firebaseUser">Show data</button>
         </pre>
