@@ -9,6 +9,11 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const firebaseConfig = {
     apiKey: config.FIREBASE_API_KEY,
+    authDomain: "nuxt3-firebase-bf934.firebaseapp.com",
+    projectId: "nuxt3-firebase-bf934",
+    storageBucket: "nuxt3-firebase-bf934.appspot.com",
+    messagingSenderId: "892581465806",
+    appId: "1:892581465806:web:a864f7b97da0d6861c0a9f"
   };
 
   // Initialize Firebase

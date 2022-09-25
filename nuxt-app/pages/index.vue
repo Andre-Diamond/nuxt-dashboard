@@ -6,6 +6,7 @@
       <client-only>
         <pre
           >user: {{ firebaseUser.email }}
+          {{ pages }}
     </pre
         >
       </client-only>
@@ -19,6 +20,11 @@ const firebaseUser = useFirebaseUser();
 const signOut = async () => {
   await signOutUser();
 };
+const pages = ref();
+onMounted(async () => {
+  const { result } = await $fetch("/api/query?col=pages");
+  pages.value = result;
+});
 </script>
 
 <style>
