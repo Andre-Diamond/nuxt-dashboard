@@ -17,7 +17,6 @@
         </div>
       </div>
       <div class="field">
-        <div>
           <label class="label">Who initiated</label>
           <div class="control has-icons-left has-icons-right">
             <input
@@ -28,11 +27,26 @@
               autocomplete="false"
             />
             <span class="icon is-small is-left">
-            <i class="fas fa-group"></i>
+            <i class="fas fa-users"></i>
             </span>
           </div>
-        </div>
       </div>
+      <div class="field">
+          <label class="label">Date</label>
+          <div class="control has-icons-left has-icons-right">
+            <input
+              v-model="form.date"
+              class="input"
+              type="text"
+              placeholder="March 2022"
+              autocomplete="false"
+            />
+            <span class="icon is-small is-left">
+            <i class="fas fa-calendar"></i>
+            </span>
+          </div>
+      </div>
+      
   
       <div v-if="message" class="has-text-success p-3">
         {{ message }}

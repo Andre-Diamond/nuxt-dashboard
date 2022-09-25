@@ -30,7 +30,7 @@
 const firebaseUser = useFirebaseUser();
 const showRegisterForm = ref(true);
 const registerMessage = ref();
-const registerForm = ref({ whatChanged: "", initiatedBy: "" });
+const registerForm = ref({ whatChanged: "", initiatedBy: "", date: "" });
 const pages = ref();
 const signOut = async () => {
   await signOutUser();
@@ -39,9 +39,9 @@ const addData = async () => {
   // Add a new document in collection "cities"
    await $fetch("/api/add?col=pages", {
       method: "POST",
-      body: {name: registerForm.value.whatChanged,
-      title: registerForm.value.initiatedBy,
-      description: "This is a test"}
+      body: {what: registerForm.value.whatChanged,
+      who: registerForm.value.initiatedBy,
+      date: registerForm.value.date}
     })
 };
 const showData = async () => {
