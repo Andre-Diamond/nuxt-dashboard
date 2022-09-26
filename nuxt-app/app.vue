@@ -11,7 +11,7 @@
           v-if="showRegisterForm"
         />
         <AuthFirebase
-          class="has-background-info-dark box px-5 py-5 mx-4"
+          class="has-background-link-dark box px-5 py-5 mx-4"
           title="Sign in"
           @submit="signin"
           :form="signinForm"
@@ -21,7 +21,7 @@
       <div class="level">
         <div class="level-item has-text-centered">
           <button class="button" @click="showRegisterForm = !showRegisterForm">
-            {{ toggleButtonText }}
+            Sign In / Register
           </button>
         </div>
       </div>

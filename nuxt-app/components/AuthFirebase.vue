@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h2 class="mb-5 title is-4 has-text-black">{{ title }}</h2>
+    <h2 class="mb-5 title is-4 has-text-light">{{ title }}</h2>
     <div class="field">
-      <label class="label">Email</label>
+      <label class="label has-text-grey-lighter">Email</label>
       <div class="control has-icons-left has-icons-right">
         <input
           v-model="form.email"
@@ -18,8 +18,8 @@
     </div>
     <div class="field">
       <div>
-        <label class="label">Password</label>
-        <div class="control">
+        <label class="label has-text-grey-lighter">Password</label>
+        <div class="control has-icons-left has-icons-right">
           <input
             v-model="form.password"
             class="input"
@@ -27,6 +27,9 @@
             placeholder="*************"
             autocomplete="false"
           />
+          <span class="icon is-small is-left">
+          <i class="fas fa-key"></i>
+        </span>
         </div>
       </div>
     </div>

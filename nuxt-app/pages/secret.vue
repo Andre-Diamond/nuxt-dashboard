@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <button class="button m-3" v-if="firebaseUser"><NuxtLink to="/">Back</NuxtLink></button>
+      <button class="button m-3"><NuxtLink to="/">Back</NuxtLink></button>
     </div>
     <div class="container p-6">
       <div class="column is-half is-offset-one-quarter has-text-light">

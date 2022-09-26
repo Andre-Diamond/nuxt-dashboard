@@ -1,8 +1,8 @@
 <template>
     <div>
-      <h2 class="mb-5 title is-4 has-text-black">{{ title }}</h2>
+      <h2 class="mb-5 title is-4 has-text-light">{{ title }}</h2>
       <div class="field">
-        <label class="label">What changed</label>
+        <label class="label has-text-grey-lighter">What changed</label>
         <div class="control has-icons-left has-icons-right">
           <input
             v-model="form.whatChanged"
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="field">
-          <label class="label">Who initiated</label>
+          <label class="label has-text-grey-lighter">Who initiated</label>
           <div class="control has-icons-left has-icons-right">
             <input
               v-model="form.initiatedBy"
@@ -32,7 +32,7 @@
           </div>
       </div>
       <div class="field">
-          <label class="label">Date</label>
+          <label class="label has-text-grey-lighter">Date</label>
           <div class="control has-icons-left has-icons-right">
             <input
               v-model="form.date"

@@ -2,7 +2,7 @@
   <div>
     <div>
       <button class="button m-3" v-if="firebaseUser">
-        <NuxtLink to="/secret">View Changes</NuxtLink>
+        <NuxtLink to="/secret">View Parameter Changes</NuxtLink>
       </button>
       <button class="button is-pulled-right m-3" @click="signOut" v-if="firebaseUser">Sign out</button>
       <p class="is-pulled-right m-4 has-text-light">user: {{ firebaseUser.email }}</p>
