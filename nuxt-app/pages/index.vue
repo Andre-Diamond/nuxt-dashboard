@@ -47,6 +47,11 @@ const addData = async () => {
       who: registerForm.value.initiatedBy,
       date: registerForm.value.date}
     })
+    registerForm.value = { whatChanged: "", initiatedBy: "", date: "" };
+    registerMessage.value = `Successfully registered`;
+    setTimeout(() => {
+      registerMessage.value = "";
+    }, 3000);
 };
 const showData = async () => {
   const { result } = await $fetch("/api/query?col=pages");

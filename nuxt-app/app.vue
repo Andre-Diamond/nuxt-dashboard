@@ -36,9 +36,7 @@ const showRegisterForm = ref(false);
 const registerMessage = ref();
 const registerForm = ref({ email: "", password: "" });
 const signinForm = ref({ email: "", password: "" });
-const toggleButtonText = computed(() => {
-  return showRegisterForm.value ? "Sign in" : "Register";
-});
+
 const signin = () => {
   signInUser(signinForm.value.email, signinForm.value.password);
   signinForm.value = { email: "", password: "" };
